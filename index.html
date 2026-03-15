@@ -1,54 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background: #f4f4f4;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #222;
-            color: white;
-            padding: 20px;
-        }
+<title>Jonathan Portfolio</title>
 
-        section {
-            margin: 40px;
-        }
+<style>
 
-        img {
-            width: 150px;
-            border-radius: 50%;
-        }
-    </style>
+/* ===== GENERAL ===== */
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+}
+
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    background:#111;
+    padding:15px;
+    position:fixed;
+    width:100%;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00adb5;
+}
+
+/* ===== LANDING ===== */
+#home{
+    background:#222;
+    color:white;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#home h1{
+    font-size:48px;
+}
+
+.btn{
+    background:#00adb5;
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* ===== ABOUT ===== */
+#about{
+    background:#f4f4f4;
+}
+
+/* ===== PROJECTS ===== */
+.project{
+    background:white;
+    margin:15px auto;
+    padding:20px;
+    max-width:500px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== SKILLS ===== */
+.skills span{
+    display:inline-block;
+    background:#00adb5;
+    color:white;
+    margin:5px;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+/* ===== CONTACT ===== */
+input, textarea{
+    width:80%;
+    padding:10px;
+    margin:10px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Jonathan Portfolio</h1>
-    <p>Web Developer | React Native Developer</p>
-</header>
+<!-- NAVIGATION -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<section>
-    <img src="https://via.placeholder.com/150">
-    <h2>About Me</h2>
-    <p>I build mobile and web applications.</p>
+<!-- HOME / LANDING -->
+<section id="home">
+<h1>Hello, I'm Jonathan</h1>
+<p>Web & React Native Developer</p>
+<a class="btn" href="#projects">View My Work</a>
 </section>
 
-<section>
-    <h2>Projects</h2>
-    <p>✔ Student Registration App</p>
-    <p>✔ Clinic Website</p>
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a passionate developer who builds mobile and web applications.
+I enjoy creating clean UI designs and solving real-world problems using technology.
+</p>
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="project">
+<h3>Student Registration App</h3>
+<p>React Native app for managing student information.</p>
+<a href="#">GitHub Link</a>
+</div>
+
+<div class="project">
+<h3>Clinic Website</h3>
+<p>Responsive medical website with landing page design.</p>
+<a href="#">GitHub Link</a>
+</div>
+
 </section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="skills">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>React Native</span>
+<span>Git & GitHub</span>
+</div>
+
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+<h2>Resume / CV</h2>
+<p>Download my resume below:</p>
+
+<a class="btn" href="cv.pdf" download>Download CV</a>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Me</h2>
+
+<form>
+<input type="text" placeholder="Your Name"><br>
+<input type="email" placeholder="Email"><br>
+<textarea placeholder="Message"></textarea><br>
+<button class="btn">Send</button>
+</form>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Jonathan | Portfolio Website</p>
+<p>
+<a href="#">GitHub</a> |
+<a href="#">LinkedIn</a>
+</p>
+</footer>
 
 </body>
 </html>
